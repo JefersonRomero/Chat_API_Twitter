@@ -19,6 +19,7 @@ from django.conf.urls import include, url
 from apps.principal.views import IndexView,LogOut
 
 urlpatterns = [
+    url(r'^chat/', include('apps.chat.urls')),
 	url('', include('social.apps.django_app.urls', namespace='social')),
     url(r'^salir/$',LogOut, name='LogOut'),
     url(r'^$', IndexView.as_view()),

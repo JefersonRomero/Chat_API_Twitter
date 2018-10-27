@@ -6,8 +6,8 @@ from django.views.generic import TemplateView
 
 
 class IndexView(TemplateView):
-	template_name = 'index.html'
+	template_name = 'chat/index.html'
 
 def LogOut(request):
 	logout(request)
-	return redirect('/')	
+	return redirect('/')
